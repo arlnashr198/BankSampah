@@ -1,0 +1,80 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f7f6; color: #1f2937; }
+a { color: inherit; }
+
+.login-body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0b5d46, #14a85a); }
+.login-box { width: 380px; max-width: 92%; background: #fff; padding: 35px; border-radius: 18px; box-shadow: 0 15px 40px rgba(0,0,0,.18); text-align: center; }
+.logo { font-size: 55px; }
+.login-box h1 { margin: 10px 0 6px; }
+.login-box p { margin: 0 0 25px; color: #6b7280; }
+.login-box form { text-align: left; }
+.login-box label, .form-card label { display:block; margin: 14px 0 7px; font-weight: 700; }
+.login-box input, .form-card input, .form-card select { width:100%; padding:12px 14px; border:1px solid #d7dedb; border-radius:10px; outline:none; background:#fff; }
+.login-box input:focus, .form-card input:focus, .form-card select:focus { border-color:#13a85b; }
+.login-box button, .btn { width:100%; border:0; border-radius:10px; padding:12px 16px; background:#13a85b; color:#fff; font-weight:700; cursor:pointer; margin-top:18px; }
+.login-box button:hover, .btn:hover { background:#0e934e; }
+.error { background:#fff1f2; color:#b91c1c; padding:11px 14px; border-radius:9px; margin: 12px 0; }
+.success { background:#ecfdf5; color:#047857; padding:11px 14px; border-radius:9px; margin: 12px 0; }
+
+.container { display:flex; min-height:100vh; }
+.sidebar { width:280px; position:fixed; left:0; top:0; bottom:0; background:#075b46; color:white; padding:24px 20px; display:flex; flex-direction:column; z-index:10; }
+.brand { font-size:22px; font-weight:800; margin: 5px 8px 28px; }
+.profile { display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.08); border-radius:14px; padding:12px; margin-bottom:20px; }
+.avatar { width:46px; height:46px; border-radius:50%; background:#20c969; color:white; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px; }
+.profile b { display:block; font-size:16px; }
+.profile small { display:block; opacity:.8; margin-top:3px; }
+.menu { flex:1; overflow:auto; padding-right:3px; }
+.menu p { font-size:12px; letter-spacing:1px; font-weight:800; color:#65e3a3; margin:18px 12px 8px; }
+.menu a { display:block; text-decoration:none; padding:12px 14px; border-radius:10px; margin:4px 0; color:white; }
+.menu a:hover, .menu a.active { background:#12ad58; }
+.logout { display:block; text-align:center; text-decoration:none; background:rgba(255,255,255,.08); padding:13px; border-radius:10px; font-weight:700; }
+.logout:hover { background:rgba(255,255,255,.14); }
+
+.main { margin-left:280px; width:calc(100% - 280px); padding:30px 32px 40px; }
+header { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:26px; }
+header h1 { margin:0 0 6px; font-size:30px; }
+header p { margin:0; color:#6b7280; }
+.role { background:#e8fff1; color:#0f8f4e; border-radius:999px; padding:9px 14px; font-weight:800; font-size:13px; }
+.welcome { border-radius:16px; padding:24px; margin-bottom:22px; background:linear-gradient(135deg,#dcfce7,#f0fdf4); }
+.welcome h2 { margin:0 0 6px; }
+.welcome p { margin:0; color:#4b5563; }
+.welcome.admin { background:linear-gradient(135deg,#ede9fe,#f5f3ff); }
+.welcome.pengepul { background:linear-gradient(135deg,#dcfce7,#f0fdf4); }
+.cards { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-bottom:22px; }
+.card { background:#fff; border-radius:16px; padding:22px; display:flex; align-items:center; gap:16px; box-shadow:0 5px 18px rgba(21,35,31,.07); }
+.card > span { width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:28px; background:#dcfce7; }
+.card small { color:#6b7280; display:block; margin-bottom:3px; }
+.card h2 { margin:0; font-size:24px; }
+.activity { background:#fff; border-radius:16px; padding:25px; margin-top:22px; box-shadow:0 5px 18px rgba(21,35,31,.07); overflow:auto; }
+.activity h2 { margin:0 0 18px; }
+.empty { padding:20px; background:#f7faf9; border-radius:10px; color:#6b7280; text-align:center; }
+.form-card { background:#fff; max-width:680px; border-radius:16px; padding:26px; box-shadow:0 5px 18px rgba(21,35,31,.07); }
+.form-card .btn { width:auto; min-width:160px; }
+.toolbar { display:flex; gap:10px; justify-content:flex-end; margin-bottom:16px; }
+.btn.secondary { background:#475569; }
+.btn.danger { background:#dc2626; }
+.btn.warning { background:#d97706; }
+.btn.small { width:auto; padding:8px 12px; margin:0; font-size:13px; }
+.table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; min-width:700px; }
+th, td { border-bottom:1px solid #e5e7eb; padding:12px 13px; text-align:left; }
+th { background:#f0fdf4; color:#166534; }
+tr:hover td { background:#fafdfb; }
+.badge { display:inline-block; padding:5px 9px; border-radius:999px; font-size:12px; font-weight:700; }
+.badge.setor { background:#dcfce7; color:#166534; }
+.badge.jual { background:#e0f2fe; color:#075985; }
+.badge.pending { background:#fef3c7; color:#92400e; }
+.badge.selesai { background:#dcfce7; color:#166534; }
+.badge.disetujui { background:#dcfce7; color:#166534; }
+.badge.ditolak { background:#fee2e2; color:#b91c1c; }
+.actions { display:flex; gap:7px; flex-wrap:wrap; }
+.stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.stat-box { background:#fff; padding:24px; border-radius:16px; box-shadow:0 5px 18px rgba(21,35,31,.07); }
+.stat-box small { color:#6b7280; }
+.stat-box h2 { margin:8px 0 0; }
+
+@media (max-width:1100px) { .cards{grid-template-columns:repeat(2,1fr);} .stat-grid{grid-template-columns:1fr;} }
+@media (max-width:800px) { .sidebar{width:230px;} .main{margin-left:230px; width:calc(100% - 230px); padding:22px;} }
+@media (max-width:650px) { .sidebar{position:static;width:100%;min-height:auto;} .container{display:block;} .main{margin-left:0;width:100%;padding:18px;} .cards{grid-template-columns:1fr;} header{align-items:flex-start;flex-direction:column;} }
+
+@media print { .sidebar, .toolbar, header .role { display:none !important; } .main { margin:0; width:100%; padding:0; } body{background:white;} }
